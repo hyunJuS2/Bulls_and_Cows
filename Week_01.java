@@ -56,28 +56,22 @@ import java.util.Scanner;
                     }
                 }
 
-
-                if(S == 0){
-                    System.out.println(B+"B");
-                }
-                if(B == 0){
-                    System.out.println(S +"S");
-                }
-                else{
-                    System.out.println(S +"S"+B+"B");
-                }
-
-
-                if(S == 3){
-                    break;
-                }
-                S = 0;
-                B = 0;
+            if(S==0 && B == 3){
+                System.out.println(B +"B");
             }
-            System.out.println(count +"번만에 맞히셨습니다.");
-            System.out.println("게임을 종료합니다.");
+            else if(S == 3){
+                System.out.println(S +"S");
+                System.out.println(count +"번만에 맞히셨습니다.");
+                System.out.println("게임을 종료합니다.");
+                break;
+            }else{
+                System.out.println(S +"S"+B+"B");
+            }
+            S = 0;
+            B = 0;
         }
     }
+}
 /*
 컴퓨터가 숫자를 생성하였습니다. 답을 맞춰보세요!
 1번째 시도 : 134
